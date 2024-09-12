@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        function data()
+        {
+           var a=document.getElementById("n1").value;
+           var b=document.getElementById("n2").value;
+           var c=document.getElementById("n3").value;
+           var d=document.getElementById("n4").value;
+           
+           
+           if(a==""||b==""||c==""||d=="")
+           {
+               alert("All feilds are fills");
+               return false;
+           }
+           else if(b.length<10||b.length>10)
+           {
+            alert("please check your Number")
+            return false;
+           }
+           else if(isNaN(b))
+           {
+            alert("only Number allow")
+            return false;
+           }
+           else if(c!=d)
+           {
+            alert("Enter same password")
+            return false;
+           }
+           else
+           {
+            true
+           }
+        }
+       </script>
+    <form onsubmit="return data()">
+    <h1>Form</h1>
+          <input type="text" placeholder="Enter your UserName" id="n1"><br>
+              <input type="text" placeholder="Enter your Phone Number" id="n2"><br>
+               <input type="password" placeholder="Enter your password" id="n3"><br>
+      <input type="password" placeholder="Enter your confirm password" id="n4"><br>
+    <br>
+    <input type="submit" value="submit Form">
+</form>
+</body>
+</html>
